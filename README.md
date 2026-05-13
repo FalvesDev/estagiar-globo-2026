@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Felipe Alves — Candidatura Estagiar Globo 2026
 
-## Getting Started
+Portfolio interativo construído como candidatura para o **Programa Estagiar Globo 2026 — Plataforma de IA**.
 
-First, run the development server:
+A candidatura em si também é um projeto: uma single-page application com animações, scroll tracking, modal de projetos e deploy automatizado.
+
+**[globo.falves.dev](https://next-app-smoky-two.vercel.app)**
+
+---
+
+## Stack
+
+| Tecnologia | Versão | Uso |
+|---|---|---|
+| Next.js | 16.2.6 | Framework, App Router, SSG |
+| TypeScript | 5.x | Tipagem estática |
+| Tailwind CSS | v4 | Estilização via `@import "tailwindcss"` |
+| Framer Motion | 12.x | Todas as animações |
+| Space Grotesk | — | Fonte de display/títulos |
+| Inter | — | Fonte de corpo |
+
+Sem bibliotecas de UI. Sem ícones externos. Todos os SVGs desenhados à mão.
+
+---
+
+## Funcionalidades
+
+- **Scroll progress bar** na navbar usando `useScroll` + `useSpring`
+- **Etiqueta de seção atual** no canto inferior esquerdo via `IntersectionObserver`
+- **Links de navegação ativos** destacados em laranja conforme a seção visível
+- **Animações de entrada** por seção com `useInView` + variantes staggered
+- **Contador animado** nos stats (93%, 3+, 6) usando `framer-motion animate()`
+- **Modal de projetos** com `AnimatePresence`, blur de backdrop, fechar com Escape ou clique fora
+- **Orbs e partículas** ambientes animados em loop
+- **Shimmer text** na headline principal via CSS `background-clip: text`
+- **Favicon SVG** customizado com o "G" da Globo em laranja
+- **Totalmente responsivo** — mobile, tablet e desktop
+
+---
+
+## Seções
+
+1. **Hero** — apresentação com headline animada e âncoras para as 3 perguntas da pré-tarefa
+2. **Quem sou** (Q1) — trajetória, stats reais de projetos entregues, stack
+3. **História** (Q2) — conexão com a Globo através do pai, Bruno Alves, e a origem do nome "falves"
+4. **Projetos** — 6 projetos com modal de screenshot, links de GitHub e demo
+5. **Plataforma de IA** (Q3) — por que essa área, com projetos como prova
+6. **Interesses** — LLMs locais, impressão 3D e RPG de mesa profissional
+7. **Como foi feito** — stack da candidatura
+8. **Footer** — links para falves.dev, GitHub e LinkedIn
+
+---
+
+## Rodando localmente
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Acesse `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Adicionando screenshots dos projetos
 
-## Learn More
+Coloque as imagens em `public/screenshots/` com os nomes abaixo e aparecem automaticamente nos cards e no modal:
 
-To learn more about Next.js, take a look at the following resources:
+```
+public/screenshots/orion.png
+public/screenshots/colectorhub.png
+public/screenshots/contador-de-bolso.png
+public/screenshots/dev-roadmap.png
+public/screenshots/renomeador-prevenir.png
+public/screenshots/contratos-prevenir.png
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deploy
 
-## Deploy on Vercel
+Deploy automático na Vercel a cada push na branch `master`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Feito com Next.js e muita vontade de passar.
