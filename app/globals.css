@@ -1,11 +1,9 @@
 @import "tailwindcss";
 @source "../app/**/*.{ts,tsx}";
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* { box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
-
-:root { --deploy-css-version: "tailwind-v4-2026-05-13"; }
 
 body {
   background: #0a0a0a;
