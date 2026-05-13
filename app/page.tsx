@@ -395,9 +395,9 @@ function Historia() {
             <FadeUp delay={0.15}>
               <blockquote className="pl-5 my-7" style={{ borderLeft: `2px solid ${A}` }}>
                 <p className="italic leading-relaxed" style={{ fontSize: "18px", color: "#d8d8d8", fontWeight: 300 }}>
-                  "Tinha uns 7, 8 anos quando fui visitar ele no trabalho pela primeira vez.
+                  &ldquo;Tinha uns 7, 8 anos quando fui visitar ele no trabalho pela primeira vez.
                   Saí de lá com uma certeza que não soube nomear naquela época, mas que hoje
-                  entendo muito bem: queria fazer parte de algo assim."
+                  entendo muito bem: queria fazer parte de algo assim.&rdquo;
                 </p>
               </blockquote>
             </FadeUp>
