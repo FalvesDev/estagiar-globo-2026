@@ -342,7 +342,7 @@ function Apresentacao() {
             {[
               { num: "93%", label: "Redução em processos críticos para clientes" },
               { num: "3+",  label: "Anos com projetos rodando em produção" },
-              { num: "6",   label: "Projetos entregues, pessoais e comerciais" },
+              { num: "10+", label: "Projetos entregues, pessoais e comerciais" },
             ].map((s, i) => (
               <FadeUp key={i} delay={0.1 + i * 0.08}>
                 <motion.div className="rounded-2xl p-5"
