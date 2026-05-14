@@ -81,7 +81,7 @@ export function ProjectModal({ project, onClose }: Props) {
                   <img
                     src={project.imgSrc}
                     alt={project.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 ) : (
                   <div className="w-full h-full flex flex-col items-center justify-center gap-3"

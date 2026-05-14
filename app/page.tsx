@@ -82,18 +82,29 @@ function Dot({ x, y, delay }: { x: string; y: string; delay: number }) {
   );
 }
 
-function ImgPlaceholder({ label }: { label: string }) {
+function ProjectPreview({ label, src, title }: { label: string; src?: string; title: string }) {
+  const [imageFailed, setImageFailed] = useState(false);
+  const showImage = src && !imageFailed;
+
   return (
-    <div className="w-full aspect-video rounded-xl flex flex-col items-center justify-center gap-2.5 mb-5"
-      style={{ background: "rgba(255,255,255,0.02)", border: `1px dashed rgba(232,99,10,0.28)` }}>
-      <svg width="18" height="18" viewBox="0 0 16 16" fill="none">
-        <rect x="1" y="1" width="14" height="14" rx="2" stroke={A} strokeWidth="1.2"/>
-        <circle cx="5.5" cy="5.5" r="1.5" stroke={A} strokeWidth="1.2"/>
-        <path d="M1 11L5 7.5L8 10.5L11 7L15 11" stroke={A} strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
-      </svg>
-      <span className="text-[10px]" style={{ color: "rgba(232,99,10,0.5)", fontFamily: "monospace" }}>
-        {label}
-      </span>
+    <div
+      className="w-full aspect-video rounded-xl flex flex-col items-center justify-center gap-2.5 mb-5 overflow-hidden"
+      style={{ background: "rgba(255,255,255,0.025)", border: `1px solid ${B}` }}
+    >
+      {showImage ? (
+        <img src={src} alt={title} className="w-full h-full object-cover" onError={() => setImageFailed(true)} />
+      ) : (
+        <>
+          <svg width="18" height="18" viewBox="0 0 16 16" fill="none">
+            <rect x="1" y="1" width="14" height="14" rx="2" stroke={A} strokeWidth="1.2"/>
+            <circle cx="5.5" cy="5.5" r="1.5" stroke={A} strokeWidth="1.2"/>
+            <path d="M1 11L5 7.5L8 10.5L11 7L15 11" stroke={A} strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+          <span className="text-[10px]" style={{ color: "rgba(232,99,10,0.5)", fontFamily: "monospace" }}>
+            {label}
+          </span>
+        </>
+      )}
     </div>
   );
 }
@@ -582,6 +593,7 @@ function Projetos({ onOpen }: { onOpen: (p: ProjectData) => void }) {
       title: "SplitEasy",
       desc: "Divisor de conta inteligente: foto da comanda, OCR extrai os itens, cada pessoa marca o que pediu e o app gera o Pix individual.",
       tech: ["React Native", "Expo", "Supabase", "Tesseract.js", "Pix"],
+      imgSrc: "/screenshots/spliteasy.png",
       imgLabel: "screenshot · spliteasy",
     },
     {
@@ -637,15 +649,15 @@ function Projetos({ onOpen }: { onOpen: (p: ProjectData) => void }) {
           </h2>
         </FadeUp>
 
-        <div className="grid md:grid-cols-2 gap-4">
+        <div className="grid auto-rows-fr md:grid-cols-2 gap-4">
           {projects.map((p, i) => (
-            <FadeUp key={i} delay={0.06 + i * 0.06}>
+            <FadeUp key={i} delay={0.06 + i * 0.06} className="h-full">
               <motion.div className="rounded-2xl p-6 h-full flex flex-col cursor-pointer"
                 style={{ background: "#111", border: `1px solid ${p.highlight ? "rgba(232,99,10,0.3)" : B}` }}
                 whileHover={{ y: -5, borderColor: "rgba(232,99,10,0.38)" }}
                 transition={{ duration: 0.22 }}
                 onClick={() => onOpen(p)}>
-                <ImgPlaceholder label={p.imgLabel} />
+                <ProjectPreview label={p.imgLabel} src={p.imgSrc} title={p.title} />
 
                 <div className="flex items-start justify-between mb-2">
                   <span className="text-[10px] font-semibold tracking-widest px-2 py-1 rounded"
