@@ -244,8 +244,8 @@ function Hero() {
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.35 }}
           className="text-xl max-w-lg leading-relaxed mb-4"
           style={{ color: "#777", fontWeight: 300 }}>
-          22 anos, Rio de Janeiro. Engenharia de Software com background em
-          Automação Industrial. Construo software que resolve problemas reais.
+          22 anos, Rio de Janeiro. Engenharia de Software, Automação Industrial
+          e uma queda por transformar processo confuso em sistema que funciona.
         </motion.p>
 
         {/* 3 perguntas como âncoras visuais */}
@@ -298,16 +298,16 @@ function Apresentacao() {
             <FadeUp delay={0.05}>
               <h2 className="font-bold leading-[0.9] tracking-tight mb-8"
                 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(38px,5.5vw,62px)", letterSpacing: "-0.03em" }}>
-                Engenharia de Software.<br />
-                <span style={{ color: A2 }}>Projetos reais.<br />Problemas reais.</span>
+                Da automação<br />
+                <span style={{ color: A2 }}>ao software.<br />Da ideia ao sistema.</span>
               </h2>
             </FadeUp>
 
             <FadeUp delay={0.1}>
               <p className="text-[#888] leading-relaxed mb-5" style={{ fontSize: "17px" }}>
                 Sou Felipe, tenho 22 anos, estudante de Engenharia de Software no Rio de Janeiro.
-                Trabalho com Next.js, TypeScript, React e Python, construindo sistemas que
-                automatizam processos e resolvem problemas concretos.
+                Trabalho com Next.js, TypeScript, React e Python, levando projetos do rascunho
+                para fluxos que pessoas realmente usam.
               </p>
             </FadeUp>
 
