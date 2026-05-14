@@ -578,13 +578,11 @@ function Projetos({ onOpen }: { onOpen: (p: ProjectData) => void }) {
       highlight: true,
     },
     {
-      tag: "MOBILE · IA",
-      title: "ColectorHub",
-      desc: "App para colecionadores de jogos físicos. Aponta a câmera pra estante e a IA cataloga via OCR, sem digitar nada.",
-      tech: ["Flutter", "Supabase", "Google ML Kit", "Gemini Vision"],
-      github: "https://github.com/FalvesDev/ColectorHub",
-      imgSrc: "/screenshots/colectorhub.png",
-      imgLabel: "screenshot · colectorhub",
+      tag: "MOBILE · FINTECH · IA",
+      title: "SplitEasy",
+      desc: "Divisor de conta inteligente: foto da comanda, OCR extrai os itens, cada pessoa marca o que pediu e o app gera o Pix individual.",
+      tech: ["React Native", "Expo", "Supabase", "Tesseract.js", "Pix"],
+      imgLabel: "screenshot · spliteasy",
     },
     {
       tag: "MOBILE · FINANÇAS",
@@ -764,9 +762,9 @@ function Area() {
                 conn: "Cada usuário recebe sugestões baseadas no próprio histórico. Aprendi que personalização de verdade é difícil de fazer direito.",
               },
               {
-                exp: "ColectorHub",
-                detail: "Flutter · Google ML Kit · Gemini Vision · OCR",
-                conn: "OCR e visão computacional pra catalogar jogos físicos. A IA não era a estrela, era a solução mais simples pro problema.",
+                exp: "SplitEasy",
+                detail: "React Native · Supabase · Tesseract.js · Pix",
+                conn: "OCR para ler comandas, divisão em tempo real e Pix individual. IA entra como parte do fluxo, não como enfeite.",
               },
             ].map((c, i) => (
               <FadeUp key={i} delay={0.15 + i * 0.08}>
