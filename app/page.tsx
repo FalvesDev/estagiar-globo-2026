@@ -200,7 +200,7 @@ function Nav() {
           initial={{ opacity: 0, x: -8 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.22 }}
-          className="flex items-center gap-3 rounded-xl px-4 py-3"
+          className="flex min-w-[150px] items-center gap-4 rounded-xl px-5 py-4"
           style={{
             color: "#8a8a8a",
             background: "rgba(10,10,10,0.78)",
@@ -209,12 +209,12 @@ function Nav() {
             fontFamily: "var(--font-display)",
             backdropFilter: "blur(16px)",
           }}>
-          <span className="h-8 w-[2px] rounded-full flex-shrink-0" style={{ background: `linear-gradient(${A2}, ${A})` }} />
+          <span className="h-10 w-[3px] rounded-full flex-shrink-0" style={{ background: `linear-gradient(${A2}, ${A})` }} />
           <span className="flex flex-col leading-none">
-            <span className="text-[9px] uppercase tracking-[0.18em]" style={{ color: "#444" }}>
+            <span className="text-[10px] uppercase tracking-[0.18em]" style={{ color: "#555" }}>
               Agora
             </span>
-            <span className="text-[12px] font-semibold mt-1 tracking-wide" style={{ color: "#d8d8d8" }}>
+            <span className="text-sm font-semibold mt-1.5 tracking-wide" style={{ color: "#f0f0f0" }}>
               {currentSection}
             </span>
           </span>
