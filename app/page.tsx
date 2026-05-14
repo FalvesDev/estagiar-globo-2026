@@ -181,19 +181,33 @@ function Nav() {
 
       {/* etiqueta de seção atual — canto inferior esquerdo */}
       <motion.div
-        className="fixed bottom-6 left-6 z-50 hidden md:block"
-        animate={{ opacity: scrolled && currentSection ? 1 : 0, y: scrolled && currentSection ? 0 : 8 }}
-        transition={{ duration: 0.3 }}>
-        <motion.span
+        className="fixed bottom-8 left-8 z-50 hidden md:block"
+        animate={{ opacity: scrolled && currentSection ? 1 : 0, y: scrolled && currentSection ? 0 : 10 }}
+        transition={{ duration: 0.28 }}>
+        <motion.div
           key={currentSection}
-          initial={{ opacity: 0, x: -6 }}
+          initial={{ opacity: 0, x: -8 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.2 }}
-          className="flex items-center gap-2 text-[10px] tracking-[0.2em] uppercase px-3 py-1.5 rounded-full"
-          style={{ color: "#555", background: "rgba(10,10,10,0.85)", border: `1px solid ${B}`, fontFamily: "var(--font-display)", backdropFilter: "blur(12px)" }}>
-          <span className="w-1 h-1 rounded-full flex-shrink-0" style={{ background: A }} />
-          {currentSection}
-        </motion.span>
+          transition={{ duration: 0.22 }}
+          className="flex items-center gap-3 rounded-xl px-4 py-3"
+          style={{
+            color: "#8a8a8a",
+            background: "rgba(10,10,10,0.78)",
+            border: `1px solid ${B}`,
+            boxShadow: "0 18px 40px rgba(0,0,0,0.32)",
+            fontFamily: "var(--font-display)",
+            backdropFilter: "blur(16px)",
+          }}>
+          <span className="h-8 w-[2px] rounded-full flex-shrink-0" style={{ background: `linear-gradient(${A2}, ${A})` }} />
+          <span className="flex flex-col leading-none">
+            <span className="text-[9px] uppercase tracking-[0.18em]" style={{ color: "#444" }}>
+              Agora
+            </span>
+            <span className="text-[12px] font-semibold mt-1 tracking-wide" style={{ color: "#d8d8d8" }}>
+              {currentSection}
+            </span>
+          </span>
+        </motion.div>
       </motion.div>
     </motion.nav>
   );
