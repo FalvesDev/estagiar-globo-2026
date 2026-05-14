@@ -624,7 +624,7 @@ function Projetos({ onOpen }: { onOpen: (p: ProjectData) => void }) {
       imgLabel: "screenshot · renomeador prevenir",
     },
     {
-      tag: "COMMERCIAL · NDA",
+      tag: "COMERCIAL · NDA · 2026",
       title: "Contratos Prevenir",
       desc: "Geração de propostas e contratos com preenchimento inteligente + export PDF. 5× mais rápido que o fluxo manual.",
       tech: ["Next.js", "TypeScript", "PDF"],
