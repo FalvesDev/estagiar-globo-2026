@@ -66,12 +66,18 @@ export function ProjectModal({ project, onClose }: Props) {
               {/* close */}
               <button
                 onClick={onClose}
-                className="absolute top-4 right-4 z-10 w-8 h-8 rounded-full flex items-center justify-center text-[#555] transition-colors hover:text-[#f0f0f0]"
-                style={{ background: "rgba(255,255,255,0.06)", border: `1px solid ${B}` }}
+                className="absolute top-4 right-4 z-10 w-11 h-11 rounded-full flex items-center justify-center text-[#aaa] transition-colors hover:text-[#f0f0f0]"
+                style={{
+                  background: "rgba(10,10,10,0.82)",
+                  border: `1px solid rgba(255,255,255,0.14)`,
+                  boxShadow: "0 10px 28px rgba(0,0,0,0.35)",
+                  backdropFilter: "blur(10px)",
+                }}
                 aria-label="Fechar"
+                title="Fechar"
               >
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                  <path d="M1 1L13 13M13 1L1 13" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <path d="M4 4L14 14M14 4L4 14" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round"/>
                 </svg>
               </button>
 
